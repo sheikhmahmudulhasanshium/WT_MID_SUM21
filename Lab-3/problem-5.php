@@ -1,21 +1,22 @@
-<?php
-  $backColor="green";
-  $fontColor="red";
-  $imageWidth="80px";
-  $imageHeight="80px";
-?>
+
 <html>
     <body>
        <table>
         <tr>
           <td>
-            <img src="aiub_logo.jpg" alt=logo" height="$imageHeight" width="$imageWidth">
+            <img src="aiub_logo.jpg" alt=logo" height="
+            <?php $imageHeight="80px"; echo $imageHeight;
+                    ?>"
+            width="<?php $imageWidth="80px"; echo $imageWidth;?>">
           </td>
           <td>
             <h2>
               American International <br>
                University-
-                <span style="background-color:green; color:red">
+                <span style="background-color:<?php $backColor="green"; echo $backColor;?>;
+                             color:
+                             <?php $fontColor="red"; echo $fontColor;?>"
+                  >
                 Bangladesh
               </span>
               
