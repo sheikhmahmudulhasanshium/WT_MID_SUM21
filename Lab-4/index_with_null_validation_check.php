@@ -93,7 +93,11 @@
                     $hasError=true;
                     $err_Confirmpassword="Confirm Password Required";
                 }
-                
+                elseif(empty($_POST["Confirmpassword"])!=empty($_POST["Confirmpassword"]))
+                {
+                    $hasError=true;
+                    $err_Confirmpassword="Both password must be similar";
+                }
                 else
                 {
                     $Confirmpassword=$_POST["Confirm password"];
