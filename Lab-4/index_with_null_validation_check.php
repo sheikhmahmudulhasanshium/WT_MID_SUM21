@@ -96,7 +96,7 @@
                 
                 else
                 {
-                    $Confirmpassword=$_POST["Confirmpassword"];
+                    $Confirmpassword=$_POST["Confirm password"];
                 }
                 
                 
@@ -107,6 +107,12 @@
                     $hasError=true;
                     $err_Email="Email Required";
                 }
+				elseif((strpos($_POST["Email"],"@")==false)&&(strpos($_POST["Email"],".")==false))
+                {
+                    $hasError=true;
+                    $err_Email="Username must  have @ and .";
+                }
+				
                 else
                 {
                     $Email=$_POST["Email"];
