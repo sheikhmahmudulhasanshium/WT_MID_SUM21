@@ -79,7 +79,11 @@
                     $hasError=true;
                     $err_Password="Password Required";
                 }
-                
+                elseif((strpos($_POST["Password"],'?')===false)||(strpos($_POST["Password"],'#')===false))
+                {
+                    $hasError=true;
+                    $err_Password="Password must have a special value(#,?)";
+                }
                 
                 else
                 {
@@ -100,7 +104,7 @@
                 }
                 else
                 {
-                    $Confirmpassword=$_POST["Confirm password"];
+                    $Confirmpassword=$_POST["Confirmpassword"];
                 }
                 
                 
